@@ -66,7 +66,7 @@ KataGo is written in C++ and has a fully working GTP engine. Once compiled, you 
       * Example: `./katago gtp -model <NEURALNET>.txt.gz -config configs/gtp_example.cfg` - Run a simple GTP engine using a given neural net and example provided config.
       * Example: `./katago tuner -model <NEURALNET>.txt.gz` - (For OpenCL) run or re-run the tuner to optimize for your particular GPU.
       * Example: `./katago evalsgf <SGF>.sgf -model <NEURALNET>.txt.gz -move-num <MOVENUM> -config configs/evalsgf_example.cfg` - Have the bot analyze the specified move of the specified SGF.
-   * Pre-trained neural nets are available on the [releases page](https://github.com/lightvector/KataGo/releases).
+   * Pre-trained neural nets are available on the [releases page](https://github.com/lightvector/KataGo/releases). Once you download a zip archive be sure to extract it before use. There is a `gz` file inside that you need to supply to the `-model` attribute.
    * You will probably want to edit `configs/gtp_example.cfg` (see "Tuning for Performance" above).
    * If using OpenCL, you will want to verify that KataGo is picking up the correct device (e.g. some systems may have both an Intel CPU OpenCL and GPU OpenCL, if KataGo appears to pick the wrong one, you can correct this by specifying `openclGpuToUse` in `configs/gtp_example.cfg`).
 
